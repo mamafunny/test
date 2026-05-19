@@ -89,46 +89,41 @@ status-website:
       href: https://github.com/mamafunny/trumpow-status
 
   css: |
-    /* Light theme */
-    @media (prefers-color-scheme: light) {
-      :root {
-        --nav-current-border-bottom-color: #B22234;
-        --submit-button-background-color: #B22234;
-        --submit-button-border-color: #8B1A28;
-        --submit-button-color: #ffffff;
-
-        --body-background-color: #fdf8f0;
-        --body-text-color: #1a0a0a;
-        --card-background-color: #ffffff;
-        --nav-background-color: #ffffff;
-        --nav-border-bottom-color: #f0dede;
-        --card-border-color: #e8d0d0;
-
-        --up-border-left-color: #28a745;
-        --tag-up-background-color: #28a745;
-      }
+    /* === Trumpow Theme === */
+    :root {
+      --nav-current-border-bottom-color: #B22234;
+      --submit-button-background-color: #B22234;
+      --submit-button-border-color: #8B1A28;
+      --submit-button-color: #ffffff;
+      --body-background-color: #ffffff;
+      --body-text-color: #111111;
+      --card-background-color: #fafafa;
+      --nav-background-color: #ffffff;
+      --nav-border-bottom-color: #B22234;
+      --card-border-color: #e5e5e5;
+      --up-border-left-color: #28a745;
+      --tag-up-background-color: #28a745;
+      --graph-filter: hue-rotate(330deg) saturate(1.4) brightness(0.85);
     }
+
+    /* Force nav red border and red links */
+    header { border-bottom: 3px solid #B22234 !important; }
+    header a, nav a { color: #B22234 !important; }
+    header a:hover, nav a:hover { color: #8B1A28 !important; }
+
+    /* Red accent on service cards */
+    article { box-shadow: 0 1px 4px rgba(178,34,52,0.08); }
 
     /* Dark theme */
     @media (prefers-color-scheme: dark) {
       :root {
-        --nav-current-border-bottom-color: #FFD700;
-        --submit-button-background-color: #B22234;
-        --submit-button-border-color: #d42a3e;
-        --submit-button-color: #ffffff;
-
-        --body-background-color: #0d0808;
-        --body-text-color: #fdf8f0;
-        --card-background-color: #1a0c0c;
-        --nav-background-color: #140909;
-        --nav-border-bottom-color: #3d1a1a;
-        --card-border-color: #4a2020;
-
-        --up-border-left-color: #28a745;
-        --tag-up-background-color: #28a745;
+        --body-background-color: #111111;
+        --body-text-color: #f5f5f5;
+        --card-background-color: #1c1c1c;
+        --nav-background-color: #161616;
+        --card-border-color: #333333;
+        --graph-filter: hue-rotate(330deg) saturate(1.4) brightness(1.1);
       }
-    }
-
-    article {
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      header { border-bottom-color: #FFD700 !important; }
+      header a, nav a { color: #FFD700 !important; }
     }
