@@ -1,31 +1,134 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# # Change these first
+# owner: upptime # Your GitHub organization or username, where this repository lives
+# repo: upptime # The name of this repository
+
+# sites:
+#   - name: Google
+#     url: https://www.google.com
+#   - name: Wikipedia
+#     url: https://en.wikipedia.org
+#   - name: Hacker News
+#     url: https://news.ycombinator.com
+#   - name: Test Broken Site
+#     url: https://thissitedoesnotexist.koj.co
+
+# status-website:
+#   # Add your custom domain name, or remove the `cname` line if you don't have a domain
+#   # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
+#   cname: demo.upptime.js.org
+#   # baseUrl: /your-repo-name
+#   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
+#   name: Upptime
+#   introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
+#   introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+#   navbar:
+#     - title: Status
+#       href: /
+#     - title: GitHub
+#       href: https://github.com/$OWNER/$REPO
+
+# # Upptime also supports notifications, assigning issues, and more
+# # See https://upptime.js.org/docs/configuration
+
+# === Trumpow Upptime Configuration ===
+owner: mamafunny
+repo: trumpow-status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
+  - name: Trumpow Website
+    url: https://trumpow.meme
+
+  - name: Trumpow Docs
+    url: https://docs.trumpow.meme
+
+  - name: Electrum API
+    url: https://electrum-api.trumpow.meme
+
+  - name: Electrum Server 2
+    url: https://electrum-server2.trumpow.meme
+
+  - name: TRMP Space
+    url: https://trmpspace.trumpow.meme
+
+  - name: Web Wallet
+    url: https://webwallet.trumpow.meme
+
+  - name: Explorer
+    url: https://explorer.trumpow.meme
+
+  - name: API
+    url: https://api.trumpow.meme
+
+  - name: Extension
+    url: https://extension.trumpow.meme
+
+  - name: electrum-server2.trumpow.meme (WebSocket)
+    url: electrum-server2.trumpow.meme
+    port: 50004
+    check: "tcp-ping"
+
+  - name: electrum-server2.trumpow.meme (SSL)
+    url: electrum-server2.trumpow.meme
+    port: 50002
+    check: "tcp-ping"
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.trumpow.com
+  logoUrl: https://trumpow.meme/logo.svg
+  name: Trumpow Status
+  introTitle: "Trumpow Network Status"
+  introMessage: >
+    Real-time uptime for the Trumpow website, docs, explorer, API,
+    web wallet, extension, TRMP Space, and electrum servers —
+    fully automated by Upptime and GitHub Actions.
+
   navbar:
     - title: Status
       href: /
     - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+      href: https://github.com/mamafunny/trumpow-status
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+  css: |
+    /* Light theme */
+    @media (prefers-color-scheme: light) {
+      :root {
+        --nav-current-border-bottom-color: #B22234;
+        --submit-button-background-color: #B22234;
+        --submit-button-border-color: #8B1A28;
+        --submit-button-color: #ffffff;
+
+        --body-background-color: #fdf8f0;
+        --body-text-color: #1a0a0a;
+        --card-background-color: #ffffff;
+        --nav-background-color: #ffffff;
+        --nav-border-bottom-color: #f0dede;
+        --card-border-color: #e8d0d0;
+
+        --up-border-left-color: #28a745;
+        --tag-up-background-color: #28a745;
+      }
+    }
+
+    /* Dark theme */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --nav-current-border-bottom-color: #FFD700;
+        --submit-button-background-color: #B22234;
+        --submit-button-border-color: #d42a3e;
+        --submit-button-color: #ffffff;
+
+        --body-background-color: #0d0808;
+        --body-text-color: #fdf8f0;
+        --card-background-color: #1a0c0c;
+        --nav-background-color: #140909;
+        --nav-border-bottom-color: #3d1a1a;
+        --card-border-color: #4a2020;
+
+        --up-border-left-color: #28a745;
+        --tag-up-background-color: #28a745;
+      }
+    }
+
+    article {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
