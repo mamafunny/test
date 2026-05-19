@@ -73,7 +73,7 @@ sites:
     check: "tcp-ping"
 
 status-website:
-  cname: status.trumpow.com
+  cname: status.trumpow.meme
   logoUrl: https://trumpow.meme/logo.svg
   name: Trumpow Status
   introTitle: "Trumpow Network Status"
