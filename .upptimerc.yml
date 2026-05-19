@@ -32,7 +32,7 @@
 
 # === Trumpow Upptime Configuration ===
 owner: mamafunny
-repo: test
+repo: trumpow-status
 
 sites:
   - name: Trumpow Website
